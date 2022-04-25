@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: first-netcore-app
+  labels:
+    app: dotnet-aks
+    component: netcore-app
+spec:
+  containers:
+  - name: webapi
+    image: testmediumacr.azurecr.io/dotnetaks:0.0.1
+    ports:
+      - containerPort: 80
