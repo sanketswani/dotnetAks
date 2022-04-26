@@ -32,6 +32,6 @@ public class WeatherForecastController : ControllerBase
 
     [HttpGet("{name}")]
     public ActionResult GetMyName(string name){
-        return Ok("My Name is : "+ name + "!!!!!");
+        return Ok("My Name is : "+ name + "!! You are welcome in AKS!!");
     }
 }
