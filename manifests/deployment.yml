@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "dotnetakscluster-bb7f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "dotnetakscluster-bb7f"
+  template:
+    metadata:
+      labels:
+        app: "dotnetakscluster-bb7f"
+    spec:
+      containers:
+        - name: "dotnetakscluster-bb7f"
+          image: "testmediumacr.azurecr.io/dotnetakscluster"
+          ports:
+          - containerPort: 80
